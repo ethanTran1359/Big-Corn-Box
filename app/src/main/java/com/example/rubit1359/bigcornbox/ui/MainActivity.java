@@ -32,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
     private NowPlaying mNowPlaying;
 
     //@BindView(R.id.list)
+    @BindView(R.id.list)
     ListView mListView;
-    @BindView(android.R.id.empty)
-    TextView mEmptyView;
+//    @BindView(android.R.id.empty)
+//    TextView mEmptyView;
     private MovieApi mMovieApi;
 
     @Override
@@ -57,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("Response", String.valueOf(response.isSuccessful()));
                 mMovies = response.body().getMovies();
-                mAdapter = new MovieAdapter(this, mMovies);
+
+                mAdapter = new MovieAdapter(MainActivity.this, mMovies);
                 mListView.setAdapter(mAdapter);
-                mListView.setEmptyView(mEmptyView);
 
 
 
@@ -68,8 +69,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<NowPlaying> call, Throwable t) {
                 Log.e("Error", t.getMessage());
-                Toast.makeText(MainActivity.this, "OK", Toast.LENGTH_SHORT).show();
-
+//                mListView.setEmptyView(mEmptyView);
 
 
             }

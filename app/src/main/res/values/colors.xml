@@ -5,9 +5,10 @@
     <color name="colorAccent">#FF4081</color>
     <color name="darkness">#19191A</color>
     <color name="redmilk">#E64D3C</color>
+    <color name="redmilkGhost">#99E64D3C</color>
     <color name="skypeGray">#333333</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="whiteGhost">#80FFFFFF</color>
+    <color name="whiteGhost">#95FFFFFF</color>
 
 
 </resources>

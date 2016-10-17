@@ -6,12 +6,67 @@
                 android:layout_height="match_parent"
                 android:background="@color/darkness">
 
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlMiddleLayout"
+                    android:background="@color/darkness">
+
+
+        <ImageView
+            android:id="@+id/imgMiddleBackDrop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.3"
+            app:srcCompat="@drawable/backdrop"/>
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/imgMiddleBackDrop"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_alignTop="@id/imgMiddleBackDrop"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMiddleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                tools:text="Captain America: Civil War"
+                android:textAlignment="viewStart"
+                android:textAllCaps="true"
+                android:textColor="@color/redmilkGhost"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvMiddleOverview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:lineSpacingExtra="5dp"
+                android:maxLines="4"
+                tools:text="Following the events of Age of Ultron, the collective goverments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side..."
+                android:textAlignment="viewStart"
+                android:textColor="@color/whiteGhost"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rlLeftLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:visibility="invisible"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/skypeGray">
@@ -33,8 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="5dp"
-                android:text="Captain America: Civil War"
                 android:textAlignment="viewEnd"
+                tools:text="Captain America: Civil War "
                 android:textColor="@color/redmilk"
                 android:textSize="15sp"
                 android:textStyle="bold"/>
@@ -43,23 +98,24 @@
                 android:id="@+id/tvLeftOverview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:ellipsize="end"
                 android:lineSpacingExtra="5dp"
-                android:maxLines="5"
-                android:text="Following the events of Age of Ultron, the collective goverments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side..."
+                android:maxLines="4"
+                tools:text="Following the events of Age of Ultron, the collective goverments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side..."
                 android:textAlignment="viewEnd"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/whiteGhost"
                 android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/tvLeftCast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
                 android:text="Chris Evans, Robert Downey Jr."
                 android:textAlignment="viewEnd"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/whiteGhost"
                 android:textSize="12sp"
                 android:textStyle="bold|italic"/>
         </LinearLayout>
@@ -69,6 +125,7 @@
             android:layout_width="120dp"
             android:layout_height="180dp"
             android:layout_alignParentLeft="true"
+            android:scaleType="centerCrop"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             app:srcCompat="@drawable/poster"/>
@@ -98,6 +155,7 @@
             android:layout_height="180dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"
             android:layout_alignParentTop="true"
             app:srcCompat="@drawable/poster"/>
 
@@ -128,7 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineSpacingExtra="5dp"
-                android:text="Captain America: Civil War"
+                tools:text="Captain America: Civil War"
                 android:textAlignment="viewStart"
                 android:textColor="@color/redmilk"
                 android:textSize="15sp"
@@ -138,25 +196,28 @@
                 android:id="@+id/tvRightOverview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:ellipsize="end"
                 android:lineSpacingExtra="5dp"
-                android:maxLines="5"
-                android:text="Following the events of Age of Ultron, the collective goverments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side..."
+                android:maxLines="4"
+                tools:text="Following the events of Age of Ultron, the collective goverments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side..."
                 android:textAlignment="viewStart"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/whiteGhost"
                 android:textSize="12sp"/>
 
             <TextView
                 android:id="@+id/tvRightCast"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:text="Chris Evans, Robert Downey Jr."
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorWhite"
+                android:visibility="gone"
                 android:textSize="12sp"
                 android:textStyle="bold|italic"/>
+
+
         </LinearLayout>
 
 
